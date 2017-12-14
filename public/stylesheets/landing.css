@@ -1,0 +1,83 @@
+body {
+  background-color: #000;
+}
+
+#landing-header {
+  z-index: 1;
+  position: relative;
+  text-align: center;
+  padding-top: 40vh;
+}
+
+#landing-header h1 {
+  color: #fff;
+}
+
+.slideshow { 
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+.slideshow li { 
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  opacity: 0;
+  z-index: 0;
+  animation: imageAnimation 50s linear infinite; 
+}
+
+.slideshow li:nth-child(1) { 
+  background-image: url(http://thumb.photo.naver.net/20150323_185/gossipgirl_p_1427121107375qwMs1_JPEG/P1060019.JPG) 
+}
+.slideshow li:nth-child(2) { 
+  background-image: url(https://search.pstatic.net/common/?src=http%3A%2F%2Fpost.phinf.naver.net%2FMjAxNzExMDRfMTA1%2FMDAxNTA5NzY0MDk0OTY2.0Ky73SL2wpOKx-UwpUtSlHZpwid6lO4OIHKcXDEZFRcg.YRRDg-mP-AUJWYWWyb_F_6U59nJBdWLVJABpmaMlCBMg.JPEG%2FI-eic_e7xqFWPIHC_nWqlLigEd-k.jpg&type=b400);
+  animation-delay: 10s; 
+}
+.slideshow li:nth-child(3) { 
+  background-image: url(http://post.phinf.naver.net/20150826_227/bling-bling_1440516296889LOUPj_JPEG/mug_obj_201508260024582114.jpg);
+  animation-delay: 20s; 
+}
+.slideshow li:nth-child(4) { 
+  background-image: url(http://blogfiles5.naver.net/20140903_74/chany0528_1409731554996KJYbI_JPEG/%C8%B2%C5%C2%C7%D8%C0%E5%B1%B98.jpg);
+  animation-delay: 30s; 
+}
+.slideshow li:nth-child(5) { 
+  background-image: url(http://post.phinf.naver.net/20160823_264/tsymam_1471939124130oOSXC_JPEG/mug_obj_2016082316584661.jpg);
+  animation-delay: 40s; 
+}
+
+@keyframes imageAnimation { 
+  0% { 
+    opacity: 0; 
+    animation-timing-function: ease-in;
+  }
+  10% {
+    opacity: 1;
+    animation-timing-function: ease-out;
+  }
+  20% {
+    opacity: 1
+  }
+  30% {
+    opacity: 0
+  }
+}
+
+/* Older browser support - .no-cssanimations class added by modernizr */
+.no-cssanimations .slideshow li {
+	opacity: 1;
+}

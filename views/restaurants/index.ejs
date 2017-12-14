@@ -1,0 +1,29 @@
+<% include ../partials/header %>
+
+<div class="container">
+    <header class="jumbotron">
+        <div class="container">
+            <h1>해장왕</h1>
+            <p>당신의 쓰린 속을 풀어줄 최고의 해장국집은?</p>
+            <p><a class="btn btn-primary btn-lg" href="/restaurants/new">새로운 해장국집 추가하기</a></p>
+        </div>
+    </header>
+    
+    <div class="row text-center" style="display:flex; flex-wrap:wrap;">
+        <% restaurants.forEach(function(restaurant){ %>
+            <div class="col-md-3 col-sm-6">
+                <div class="thumbnail">
+                    <img src="<%= restaurant.image %>">
+                    <div class="caption">
+                        <h4><%= restaurant.name %></h4>
+                    </div>
+                    <p>
+                        <a href="/restaurants/<%= restaurant._id %>" class="btn btn-primary">More Info</a>
+                    </p>
+                </div>
+            </div>
+        <% }); %>
+    </div>
+    
+</div>
+<% include ../partials/footer %>

@@ -1,0 +1,32 @@
+<% include ../partials/header %>
+
+<div class="container">
+    <div class="row">
+        <h1 style="text-align: center;">새로운 해장국집 추가하기</h1>
+        <div style="width: 30%; margin: 25px auto;">
+            <form action="/restaurants" method="POST">
+                <div class="form-group">
+                    <input class="form-control" type="text" name="name" placeholder="상호">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" name="phone" placeholder="전화번호">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" name="address" placeholder="주소">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" name="image" placeholder="사진 URL">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" name="description" placeholder="설명">
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-lg btn-primary btn-block">제출하기</button>
+                </div>
+            </form>
+            <a href="/restaurants">뒤로 가기</a>
+        </div>
+    </div>
+</div>
+
+<% include ../partials/footer %>
