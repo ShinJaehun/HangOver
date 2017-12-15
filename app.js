@@ -15,8 +15,10 @@ var express     = require("express"),
     indexRoutes = require("./routes/index"),
     
     seedDB      = require("./seeds");
+    
+var url = process.env.DATABASEURL || "mongodb://localhost/hangover";
+mongoose.connect(url);
 
-mongoose.connect("mongodb://localhost/hangover");
 app.use(bodyParser.urlencoded({extended:true}));
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
